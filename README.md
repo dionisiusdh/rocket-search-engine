@@ -1,7 +1,7 @@
 # Tugas Besar 2 - Aljabar Linear dan Geometri
 > Aplikasi Dot Product pada Sistem Temu Balik Informasi
 
-### Kelompok tasdasdadwda
+### Kelompok 8 - tasdasdadwda
 | Anggota | NIM |
 | --- | --- |
 |Rexy Gamaliel R. | 13519010 |	
@@ -16,22 +16,47 @@
 * [Features](#features)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem temu balik informasi dengan menggunakan teori dot product pada vektor. Pada website ini, pengguna dapat memasukkan query dan mendapatkan hasil dokumen terurut berdasarkan nilai cosine similarity.
 
 ## Screenshots
 ![Example screenshot](./img/screenshot.png)
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+* React.js
+* Flask
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+1. Pastikan Node.js, NPM, Python, dan Flask telah terinstall di komputer anda.
+2. Clone repository ini pada komputer anda
+3. Masuk ke folder src/server/ dengan
+```
+cd src
+cd server
+```
+4. Install requirements yang dibutuhkan dengan menjalankan perintah ``` pip install -r requirements.txt ``` atau install secara manual dengan melihat list dependencies yang diperlukan pada ```requirements.txt```
+5. Kembali ke directory utama dengan
+```
+cd ..
+cd ..
+```
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+**Frontend**
+1. Masuk ke dalam folder src/client/ dengan command
+```
+cd src
+cd client
+```
+2. Jalankan command ```npm start```
+3. Website akan terbuka pada browser dengan alamat localhost:3000
+
+**Backend**
+1. Masuk ke dalam folder src/server/ dengan command
+```
+cd src
+cd server
+```
+2. Jalankan command ```flask run```
+3. Backend telah dijalankan. Pastikan untuk merefresh browser jika terjadi kendala
 
 ## Features
 List of features ready and TODOs for future development
@@ -44,4 +69,4 @@ To-do list:
 * Wow improvement to be done 2
 
 
-### Terima kasih
+## Terima kasih
