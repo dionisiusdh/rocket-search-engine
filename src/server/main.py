@@ -1,22 +1,19 @@
-from flask import Flask, redirect, url_for, jsonify, request
+from flask import Flask, redirect, render_template, url_for, jsonify, request
 from program import query_sim
-import time
 
 app = Flask(__name__)
 
-@app.route('/time')
-def get_current_time():
-    return {'time': time.time(),'message':"test123"}
-
-@app.route('/query')
-def get_query_sim(q="Sea"):
-    return jsonify(query_sim(q))
-
-"""
-@app.route('/query', methods=["GET"])
+@app.route('/query', methods=["POST"])
 def get_query_sim():
     query = request.form["que"]
-    return query_sim(query)"""
+    # return jsonify(query_sim(query))
+    return redirect(url_for("query_result", que=query))
+
+@app.route('/<que>')
+def query_result(que):
+    #return jsonify(query_sim(que))
+    res = query_sim(que)
+    return render_template("query_result.html", content=res)
 
 if __name__ == "__main__":
     app.run(debug=True)

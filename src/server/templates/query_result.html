@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Result{% endblock %}
+
+{% block content %}
+{% for i in range(5) %}
+	<h3><a href="#">{{content[i].title}}</a></h3>
+	<h6>Sim: {{content[i].sim}}</h6>
+	<p>{{content[i].first_sentence}}</p>
+	<br>
+{% endfor %}
+{% endblock %}
