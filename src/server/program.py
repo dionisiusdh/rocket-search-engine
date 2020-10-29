@@ -41,7 +41,6 @@ def query_sim(q):
 
     res = sort_dict(res)
     res = make_json(res, first_sentence)
-    print(res)
 
     return res
 
@@ -53,19 +52,15 @@ def sort_dict(dictionary):
 def make_json(dictionary, first_sentence):
     # Membuat dictionary menjadi berformat json
     # Mereturn hasil dalam bentuk
-    # {'data_X' : 
-    #   {'title' : ... , 
+    # [ {'title' : ... , 
     #    'sim': ..., 
     #    'first_sentence':...}
     #   , ...
-    # }
+    # ]
 
-    res = dict()
-    counter = 1
+    res = []
 
     for k, v in dictionary.items():
-        key = "data_" + str(counter)
-        res[key] = {"title":k, "sim":v, "first_sentence":first_sentence[k]}
-        counter += 1
+        res.append({"title":k, "sim":v, "first_sentence":first_sentence[k]})
 
     return res
