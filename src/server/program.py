@@ -1,7 +1,7 @@
 try:
     from os import listdir
     from os.path import isfile, join
-    from document import document, get_tokens
+    from document import document, get_tokens, get_first_sentence
     from vector import vectorize, sim
 except:
     print("Mohon install requirements terlebih dahulu.")
@@ -11,7 +11,7 @@ def query_sim(q):
     # Mencari similarity dari query dari kumpulan dokumen yang ada di folder test
     # Output hasil query yang telah terurut berdasarkan value dalam bentuk dictionary
 
-    # Cek nama file yang ada dalam folder test
+    # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
     all_files = [f[:len(f)-4] for f in listdir("../../test") if isfile(join("../../test", f))]
 
     # Read file
@@ -27,6 +27,9 @@ def query_sim(q):
     # Tokenisasi
     tokens = get_tokens(docs)
 
+    # Kalimat pertama
+    first_sentence = get_first_sentence(all_files, docs[:len(docs)-1])
+
     # Vectorize token
     vs = vectorize(tokens)
     tokq = vs.pop(len(vs)-1)
@@ -37,7 +40,8 @@ def query_sim(q):
         res[all_files[i]] = sim(tokq, vs[i])
 
     res = sort_dict(res)
-    res = make_json(res)
+    res = make_json(res, first_sentence)
+    print(res)
 
     return res
 
@@ -46,14 +50,22 @@ def sort_dict(dictionary):
     dictionary = {k: v for k, v in sorted(dictionary.items(), key=lambda item: item[1], reverse=True)}
     return dictionary
 
-def make_json(dictionary):
+def make_json(dictionary, first_sentence):
     # Membuat dictionary menjadi berformat json
+    # Mereturn hasil dalam bentuk
+    # {'data_X' : 
+    #   {'title' : ... , 
+    #    'sim': ..., 
+    #    'first_sentence':...}
+    #   , ...
+    # }
+
     res = dict()
     counter = 1
 
     for k, v in dictionary.items():
         key = "data_" + str(counter)
-        res[key] = {"title":k, "sim":v}
+        res[key] = {"title":k, "sim":v, "first_sentence":first_sentence[k]}
         counter += 1
 
     return res

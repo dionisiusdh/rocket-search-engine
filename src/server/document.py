@@ -25,6 +25,7 @@ class document():
     def __init__(self, text):
         self.text = text
         self.tokens = None
+        self.first_sentence = text.split('.')[0]
 
     def preprocess(self):
         # Preprocessing text dengan menghapus stopwords dan stemming
@@ -53,3 +54,16 @@ def get_tokens(documents):
         tokens.append(t.tokens)
     
     return tokens
+
+def get_first_sentence(titles, documents):
+    # Melakukan preprocessing dan menghasilkan kalimat pertama dari sekumpulan dokumen
+    fsentence = dict()
+    i = 0
+
+    for doc in documents:
+        t = document(doc)
+        t.preprocess()
+        fsentence[titles[i]] = t.first_sentence
+        i += 1
+    
+    return fsentence
