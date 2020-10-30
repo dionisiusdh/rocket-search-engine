@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Document } from '../components/Document';
 import { Header, Container } from "semantic-ui-react";
 import { getCookie } from '../services/Cookie';
+import { Link } from 'react-router-dom';
 
 function Result() {
   const [documents, setDocuments] = useState([]);
@@ -20,6 +21,8 @@ function Result() {
         <Header>Result</Header>
         <Document docs={documents} />
       </Container>
+      <br></br>
+      <Link to="/">Kembali</Link>
     </div>
   );
 }

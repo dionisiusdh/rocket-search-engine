@@ -12,13 +12,15 @@ def query_sim(q):
     # Output hasil query yang telah terurut berdasarkan value dalam bentuk dictionary
 
     # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
-    all_files = [f[:len(f)-4] for f in listdir("../../test") if isfile(join("../../test", f))]
+    DOCUMENT_PATH = "../../test/upload/"
+
+    all_files = [f[:len(f)-4] for f in listdir(DOCUMENT_PATH) if isfile(join(DOCUMENT_PATH, f))]
 
     # Read file
     docs = []
 
     for file in all_files:
-        path = "../../test/" + file + ".txt"
+        path = DOCUMENT_PATH + file + ".txt"
         f = open(path, "r")
         docs.append(f.read())
 
