@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Upload } from './components/Upload';
+import { Upload } from './modules/Upload';
 import Home from "./modules/Home";
-import Result from "./modules/Result"
+import Result from "./modules/Result";
+import About from "./modules/About";
+import Show from "./modules/Show";
 
 function App() {
   return (
@@ -13,8 +15,9 @@ function App() {
             <Switch>
               <Route path='/' exact component={Home} />
               <Route path='/result/' component={Result} />
-              <Route path='/result/:path' component={Result} />
+              <Route path='/show/:file' component={Show} />
               <Route path='/upload/' component={Upload} />
+              <Route path='/about' component={About} />
             </Switch>
         </BrowserRouter>
     </div>

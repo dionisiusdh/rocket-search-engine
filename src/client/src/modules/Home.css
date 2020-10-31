@@ -11,7 +11,7 @@ body .home {
 
   background-position: center;
   background-size: cover;
-  background-image: url('./../assets/test.jpg');
+  background-image: url('./../assets/background.jpg');
   background-repeat: no-repeat, repeat;
 }
 
@@ -20,13 +20,17 @@ body .home {
   font-size: 4rem;
 }
 
-.query-form {
-  align-content: center;
-}
-
 .center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.text-muted {
+  margin: 1rem auto;
+}
+
+.query-form {
+  width: 70%;
 }

@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .navbar {
     background-color: black;
     color: white;
@@ -16,6 +20,13 @@
 }
 
 .nav-link {
-  margin-right: 15rem;
+  margin-right: 10rem;
   margin-left: 10rem;
+
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: none;
+  font-weight: bold;
 }

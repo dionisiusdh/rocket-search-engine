@@ -22,15 +22,16 @@ function Home() {
             <div>
                 <Container style={{marginTop:40, marginLeft:30, marginRight:30, marginBottom:470}}>
                     <Form>
-                        <Form.Group className="query-form center" action="/post" method="post">
+                        <Form.Group className="query-box center" action="/post" method="post">
                             <h1 className="home-title">
-                                <span style={{color:'#4885ed'}}>G</span>
-                                <span style={{color:'#1aa260'}}>u</span>
-                                <span style={{color:'#db3236'}}>g</span>
-                                <span style={{color:'#4885ed'}}>e</span>
-                                <span style={{color:'#f4c20d'}}>l</span>
+                                <span style={{color:'#4885ed'}}>R</span>
+                                <span style={{color:'#db3236'}}>o</span>
+                                <span style={{color:'#f4c20d'}}>c</span>
+                                <span style={{color:'#4885ed'}}>k</span>
+                                <span style={{color:'#1aa260'}}>e</span>
+                                <span style={{color:'#db3236'}}>t</span>
                             </h1>
-                            <Form.Control required type="text" name="que"
+                            <Form.Control className="query-form" required type="text" name="que"
                                           placeholder="Query..." 
                                           onChange={e => setQuery(e.target.value)} />
                             <Form.Text className="text-muted">

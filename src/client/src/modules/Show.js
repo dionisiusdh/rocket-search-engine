@@ -9,9 +9,9 @@ import { getCookie } from '../services/Cookie';
 import { Link } from 'react-router-dom';
 
 // Styling
-import "./Result.css"
+import "./Show.css"
 
-function Result() {
+function Show() {
   const [documents, setDocuments] = useState([]);
   const [path, setPath] = useState('');
 
@@ -23,16 +23,24 @@ function Result() {
   }, []);
 
   return (
-    <body className="result">
+    <body>
       <Header/>
       <div className="App">
-        <h1 className="result-title">Result</h1>
+        <Container style={{marginTop:40, marginLeft:30, marginRight:30, backgroundColor:'powderblue', borderRadius: 10, width:200}}>
+          <h1>RESULT</h1>
+        </Container>
         <Container style={{textAlign:'left'}}>
           <Document docs={documents} />
         </Container>
+        <br></br>
+        <Container style={{backgroundColor:'lightgreen', borderRadius: 10, width:200}}>
+          <Link to="/">Kembali</Link>
+        </Container>
+        <br></br><br></br>
       </div>
+      <Footer/>
     </body>
   );
 }
 
-export default Result;
+export default Show;

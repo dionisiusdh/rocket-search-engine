@@ -9,9 +9,9 @@ export const Document = ({ docs }) => {
                 {docs.map(doc => {
                     return (
                         <List.Item key={doc.title} className="doc">
-                            <a className="doc-title">{doc.title}</a>
-                            <p>Sim: {doc.sim}</p>
-                            <p>{doc.first_sentence}</p>
+                            <a className="doc-title" href={"/show/" + doc.title}>{doc.title}</a>
+                            <p className="fs">{doc.first_sentence}</p>
+                            <p className="sim">Sim: {doc.sim}</p>
                         </List.Item>
                     )
                 })}

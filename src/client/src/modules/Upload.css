@@ -1,0 +1,20 @@
+body .upload {
+    height: 58rem;
+    width: 100%;
+  
+    background-position: center;
+    background-size: cover;
+    background-image: url('./../assets/background.jpg');
+    background-repeat: no-repeat, repeat;
+  }
+
+.upload-title {
+    font-family: 'Product Sans';
+    font-size: 3rem;
+    color: white;
+    padding-top: 3%;
+}
+
+.upload-box h4 {
+    color: lightgrey;
+}

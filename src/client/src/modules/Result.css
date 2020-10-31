@@ -1,0 +1,12 @@
+body .result {
+    height: 58rem;
+    width: 100%;
+    background-color: #133A49;
+  }
+  
+.result-title {
+    font-family: 'Product Sans';
+    font-size: 3rem;
+    padding-top: 3%;
+    color: white;
+}

@@ -5,10 +5,22 @@
 
 .doc {
     margin-top: 1.2rem;
-    margin-left: 1.2rem;
-    margin-right: 1.2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 2rem;
 }
 
 .doc-title {
     font-size: 1.2rem;
+    color: lightseagreen;
+}
+
+.sim {
+    color: grey;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.fs {
+    color: white;
 }

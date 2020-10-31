@@ -11,7 +11,7 @@ export const Footer = () => {
                       to="/"
                       className="foot-link"
                   >
-                    © 2020 IniGugel
+                    © 2020 Rocket
                   </NavLink>
                   <br></br>
                   <NavLink
