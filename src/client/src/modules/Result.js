@@ -36,7 +36,7 @@ function Result() {
         <Container style={{marginTop:40, marginLeft:30, marginRight:30, backgroundColor:'powderblue', borderRadius: 10, width:200}}>
           <h1>RESULT</h1>
         </Container>
-        <Container>
+        <Container style={{textAlign:'left'}}>
           <Document docs={documents} />
         </Container>
         <br></br>
