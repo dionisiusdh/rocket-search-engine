@@ -23,10 +23,13 @@ function Home() {
     return (
         <body style={divStyle}>
             <header style={divFooter}>
-                <h2>IniGugel</h2>
+                <h2><span style={{color:'#4885ed'}}>I</span><span style={{color:'#db3236'}}>n</span><span style={{color:'#f4c20d'}}>i</span>
+                    <span style={{color:'#4885ed'}}>G</span><span style={{color:'#1aa260'}}>u</span><span style={{color:'#db3236'}}>g</span>
+                    <span style={{color:'#4885ed'}}>e</span><span style={{color:'#f4c20d'}}>l</span>
+                </h2>
             </header>
             <div className="App">
-                <Container style={{marginTop:40, marginLeft:30, marginRight:30, marginBottom:460}}>
+                <Container style={{marginTop:40, marginLeft:30, marginRight:30, marginBottom:470}}>
                     <Container style={{backgroundColor:'lightgreen', borderRadius: 10, width:200}}>
                          <Link to="/upload">Upload dokumen</Link>
                     </Container>
