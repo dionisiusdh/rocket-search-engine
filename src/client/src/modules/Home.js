@@ -1,12 +1,18 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, Component} from 'react';
 import { Link } from 'react-router-dom';
 import { setCookie } from './../services/Cookie';
 import { Header, Container } from "semantic-ui-react";
+import {Navbar, Nav, NavDropdown}  from 'react-bootstrap';
 
 const divStyle = {
-    backgroundColor:'cyan',
+    backgroundColor:'#f8c414',
     height: '100%',
     width: '100%'
+}
+const divFooter = {
+    backgroundColor:'black',
+    color:'#f8c414',
+    fontfamily: 'verdana'
 }
 
 function Home() {
@@ -16,9 +22,14 @@ function Home() {
     setCookie('query',query,1);
     return (
         <body style={divStyle}>
+            <header style={divFooter}>
+                <h2>IniGugel</h2>
+            </header>
             <div className="App">
-                <Container style={{marginTop:40, marginLeft:30, marginRight:30, marginBottom:487}}>
-                    <Link to="/upload">Upload dokumen</Link>
+                <Container style={{marginTop:40, marginLeft:30, marginRight:30, marginBottom:460}}>
+                    <Container style={{backgroundColor:'lightgreen', borderRadius: 10, width:200}}>
+                         <Link to="/upload">Upload dokumen</Link>
+                    </Container>
                     <Header>Query</Header>
                     <form action="/post" method="post">
                         <p>
@@ -30,7 +41,7 @@ function Home() {
                     </form>
                 </Container>
             </div>
-            <footer className="footer">
+            <footer style={divFooter} className="footer">
                 <p>© 2020 IniGugel</p>
             </footer>
         </body>
