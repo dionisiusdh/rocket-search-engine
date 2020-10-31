@@ -1,0 +1,14 @@
+.document {
+    display: flex;
+    flex-direction: column;
+}
+
+.doc {
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.doc-title {
+    font-size: 1.2rem;
+}

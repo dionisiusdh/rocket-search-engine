@@ -1,0 +1,21 @@
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 3.5rem;
+    padding-top: 0.5rem;
+  }
+
+.title {
+  margin-left: 5rem;
+}
+
+.nav-links {
+  padding-top: 0.2%;
+  padding-left: 15%;
+}
+
+.nav-link {
+  margin-right: 15rem;
+  margin-left: 10rem;
+}
