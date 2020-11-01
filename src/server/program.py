@@ -3,6 +3,7 @@ try:
     from os.path import isfile, join
     from document import document, get_tokens, get_first_sentence
     from vector import vectorize, sim
+    from reader import get_files, read_txt
 except:
     print("Mohon install requirements terlebih dahulu.")
     print("pip install -r requirements.txt")
@@ -14,15 +15,17 @@ def query_sim(q):
     # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
     DOCUMENT_PATH = "../../test/upload/"
 
-    all_files = [f[:len(f)-4] for f in listdir(DOCUMENT_PATH) if isfile(join(DOCUMENT_PATH, f))]
+    all_files = get_files(DOCUMENT_PATH)
 
     # Read file
     docs = []
 
     for file in all_files:
         path = DOCUMENT_PATH + file + ".txt"
-        f = open(path, "r")
-        docs.append(f.read())
+        f = read_txt(path)
+        docs.append(f)
+        #f = open(path, "r")
+        #docs.append(f.read())
 
     docs.append(q)
 
