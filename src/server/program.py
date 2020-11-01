@@ -1,7 +1,7 @@
 try:
     from os import listdir
     from os.path import isfile, join
-    from document import document, get_tokens, get_first_sentence
+    from document import document, get_tokens, get_first_sentence, get_num_words, get_table_html, get_table
     from vector import vectorize, sim
     from reader import get_files, read_txt
 except:
@@ -34,6 +34,7 @@ def query_sim(q):
 
     # Kalimat pertama
     first_sentence = get_first_sentence(all_files, docs[:len(docs)-1])
+    num_words = get_num_words(all_files, docs[:len(docs)-1])
 
     # Vectorize token
     vs = vectorize(tokens)
@@ -45,16 +46,36 @@ def query_sim(q):
         res[all_files[i]] = sim(tokq, vs[i])
 
     res = sort_dict(res)
-    res = make_json(res, first_sentence)
+    res = make_json(res, first_sentence, num_words)
 
     return res
+
+def term_frequency_table(q):
+    # Menghasilkan term_frequency_table dari query terhadap dokumen yang ada dalam format HTML
+
+    # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
+    DOCUMENT_PATH = "../../test/upload/"
+
+    all_files = get_files(DOCUMENT_PATH)
+
+    # Read file
+    docs = []
+
+    for file in all_files:
+        path = DOCUMENT_PATH + file + ".txt"
+        f = read_txt(path)
+        docs.append(f)
+
+    docs.append(q)
+
+    return get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
 
 def sort_dict(dictionary):
     # Sorting sebuah dictionary berdasarkan value
     dictionary = {k: v for k, v in sorted(dictionary.items(), key=lambda item: item[1], reverse=True)}
     return dictionary
 
-def make_json(dictionary, first_sentence):
+def make_json(dictionary, first_sentence, num_words):
     # Membuat dictionary menjadi berformat json
     # Mereturn hasil dalam bentuk
     # [ {'title' : ... , 
@@ -66,6 +87,6 @@ def make_json(dictionary, first_sentence):
     res = []
 
     for k, v in dictionary.items():
-        res.append({"title":k, "sim":v, "first_sentence":first_sentence[k]})
+        res.append({"title":k, "sim":v, "first_sentence":first_sentence[k], "num_words":num_words[k]})
 
     return res

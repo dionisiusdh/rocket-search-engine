@@ -33,6 +33,31 @@ def vectorize(tokens):
     
     return res
 
+def term_frequency(tokens):
+    # Membuat map frekuensi kata dokumen dari sekumpulan token kata dokumen
+    # Mengambil seluruh kata-kata yang ada dalam kumpulan dokumen
+    words = []
+    
+    for tok in tokens:
+        words += tok
+    
+    words = set(words)
+    res = []
+
+    # Membuat vektor untuk masing-masing dokumen
+    for tok in tokens:
+        m = dict()
+
+        for word in words:
+            m[word] = 0
+
+        for word in tok:
+            m[word] += 1
+        
+        res.append(m)
+    
+    return res
+
 def dot(a, b):
     # Melakukan dot product pada vektor a dan b
     # Prasyarat: Ukuran a dan b harus sama

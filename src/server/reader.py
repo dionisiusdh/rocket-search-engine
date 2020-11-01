@@ -19,3 +19,9 @@ def read_txt(path):
             result += line.rstrip()
     
     return result
+
+def write(doc, path):
+    # Writing
+    file = open(path, 'w')
+    file.write(doc)
+    file.close()

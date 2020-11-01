@@ -11,7 +11,8 @@ export const Document = ({ docs }) => {
                         <List.Item key={doc.title} className="doc">
                             <a className="doc-title" href={"/show/" + doc.title}>{doc.title}</a>
                             <p className="fs">{doc.first_sentence}</p>
-                            <p className="sim">Sim: {doc.sim}</p>
+                            <p className="num">Jumlah kata: {doc.num_words}</p>
+                            <p className="sim">Similarity: {doc.sim}</p>
                         </List.Item>
                     )
                 })}
