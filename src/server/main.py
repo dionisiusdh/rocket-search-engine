@@ -1,6 +1,7 @@
 from flask import Flask, redirect, flash, render_template, url_for, json, jsonify, request, send_from_directory
 import os
-from program import query_sim
+from program import query_sim, term_frequency_table
+from reader import read_txt
 
 app = Flask(__name__)
 app.secret_key = "abcdefg"
@@ -13,6 +14,10 @@ def json_response(response, status=200):
 def result(query):
     # Mereturn hasil perhitungan similarity terhadap dokumen yang ada berdasarkan query
     return jsonify(query_sim(query))
+
+@app.route('/tf-table/<query>', methods=["GET"])
+def tf_table(query):
+    return jsonify(term_frequency_table(query, False))
 
 @app.route('/post', methods=["POST"])
 def post():
@@ -39,33 +44,41 @@ def upload_file():
             filename = file.filename
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             
-        return """
-        File berhasil di upload.
-        <a href="/upload">Kembali</a>
-        """
+        return success
 
     return json_response({'res':'Pastikan file anda benar'})
 
-@app.route('/show/<filename>')
+@app.route('/show/<filename>', methods=["GET"])
 def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'],
-                               filename)
+    return jsonify(read_txt(UPLOAD_FOLDER + '/' + filename));
+    #return send_from_directory(app.config['UPLOAD_FOLDER'],
+    #                           filename)
 
-""" 
-STATIC
-@app.route('/query', methods=["POST"])
-def get_query_sim():
-    query = request.form["quer"]
-    # return jsonify(query_sim(query))
-    return redirect(url_for("query_result", que=query))
+# ===================== HTML =====================
 
-
-@app.route('/<que>')
-def query_result(que):
-    #return jsonify(query_sim(que))
-    res = query_sim(que)
-    return render_template("query_result.html", content=res)
-"""
+success = """
+        <div style="color:blue; 
+                    align-items: center; 
+                    display:flex; 
+                    flex-direction:column;
+                    background-color: #133A49;
+                    width: 100%;
+                    height: 100%">
+            <img style="margin-top: 5%;"
+                src="favicon.ico"/>
+            <h1 style="font-family: 'Calibri';
+                        color: #4885ed;
+                        font-size:50px;
+                        margin-top: 3%;"
+                        >
+                    File berhasil di upload.</h1>
+            <a  href="/upload" 
+                style="font-family: 'Calibri';
+                font-size:25px;
+                color: black;">
+                    Kembali</a>
+        </div>
+        """
 
 if __name__ == "__main__":
     app.run(debug=True)

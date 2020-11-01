@@ -10,3 +10,32 @@ body .result {
     padding-top: 3%;
     color: white;
 }
+
+.ttable {
+  background-color: white;
+  width: 100px;
+  margin-top: 1015rem;
+}
+
+.ttable-title {
+  font-size: 20px;
+  color: #4885ed;
+}
+
+.ttable-all {
+  margin-top: 20px;
+}
+
+.ttable-box {
+  overflow-x: scroll;
+  overflow-y: scroll;
+  height: 30rem;
+  width: 40%;
+  justify-content: center;
+  display: flex;
+
+  background-position: center;
+  background-size: cover;
+  background-image: url('./../assets/table.jpg');
+  background-repeat: no-repeat, repeat;
+}

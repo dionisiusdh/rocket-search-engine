@@ -16,6 +16,7 @@ function About() {
             <Header/>
             <div className="about-box center">
                 <h1>About</h1>
+                <h2>Kelompok 8 - tasdasdadwda</h2>
                 <Table className="table" striped bordered hover variant="dark" size="sm">
                     <thead>
                         <tr>

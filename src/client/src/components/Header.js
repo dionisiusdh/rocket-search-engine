@@ -9,8 +9,12 @@ export const Header = () => {
             <Navbar clasName='navbar' variant='dark'>
                 <Navbar.Brand>
                     <h1 className="title" style={{fontFamily:"Product Sans"}}>
-                        <span style={{color:'#4885ed'}}>R</span><span style={{color:'#db3236'}}>o</span><span style={{color:'#f4c20d'}}>c</span>
-                        <span style={{color:'#4885ed'}}>k</span><span style={{color:'#1aa260'}}>e</span><span style={{color:'#db3236'}}>t</span>
+                        <a href="/" style={{color:'#4885ed'}}>R</a>
+                        <a href="/" style={{color:'#db3236'}}>o</a>
+                        <a href="/" style={{color:'#f4c20d'}}>c</a>
+                        <a href="/" style={{color:'#4885ed'}}>k</a>
+                        <a href="/" style={{color:'#1aa260'}}>e</a>
+                        <a href="/" style={{color:'#db3236'}}>t</a>
                     </h1>
                 </Navbar.Brand>
                 <Nav className="nav-links">

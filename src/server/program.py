@@ -50,7 +50,7 @@ def query_sim(q):
 
     return res
 
-def term_frequency_table(q):
+def term_frequency_table(q, html=False):
     # Menghasilkan term_frequency_table dari query terhadap dokumen yang ada dalam format HTML
 
     # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
@@ -68,7 +68,10 @@ def term_frequency_table(q):
 
     docs.append(q)
 
-    return get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
+    if html:
+        return get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
+    
+    return get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1]))
 
 def sort_dict(dictionary):
     # Sorting sebuah dictionary berdasarkan value
