@@ -57,7 +57,7 @@ function Result() {
       <Header/>
       <div className="App">
         <h1 className="result-title">Result</h1>
-        <Button onClick={getTfTable}>{showTable ? <p>Hide Term Table</p> : <p>Show Term Table</p>}</Button>
+        <Button className="show-button" onClick={getTfTable}>{showTable ? <p>Hide Term Table</p> : <p>Show Term Table</p>}</Button>
         {showTable ? 
           <div className="ttable-all center">
             <h2 className="ttable-title">Term Frequency Table</h2>

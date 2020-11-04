@@ -14,7 +14,12 @@ body .about {
 
 .about-box h1 {
     font-family: 'Product Sans';
-    color: white;
+    color: #4885ed;
     font-size: 3rem;
     padding-top: 3%;
+}
+
+.about-box h2 {
+    font-family: 'Product Sans';
+    color: #1aa260;
 }

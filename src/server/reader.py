@@ -17,6 +17,7 @@ def read_txt(path):
     with open(path) as text:
         for line in text:
             result += line.rstrip()
+            result += " "
     
     return result
 

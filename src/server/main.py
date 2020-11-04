@@ -50,7 +50,11 @@ def upload_file():
 
 @app.route('/show/<filename>', methods=["GET"])
 def uploaded_file(filename):
-    return jsonify(read_txt(UPLOAD_FOLDER + '/' + filename));
+    return jsonify(
+        {'title':filename[:len(filename)-4],
+        'text':read_txt(UPLOAD_FOLDER + '/' + filename)
+        }
+        );
     #return send_from_directory(app.config['UPLOAD_FOLDER'],
     #                           filename)
 

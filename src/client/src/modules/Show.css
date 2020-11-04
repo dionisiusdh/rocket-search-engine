@@ -1,0 +1,21 @@
+.text-box {
+    padding-top: 2rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    padding-bottom: 2rem;
+}
+
+.text-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.text-title {
+    font-family: 'Product Sans';
+    line-height: normal;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4885ed;
+}
