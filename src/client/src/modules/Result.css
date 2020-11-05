@@ -6,7 +6,7 @@ body .result {
   
 .result-title {
     font-family: 'Product Sans';
-    font-size: 3rem;
+    font-size: 2rem;
     padding-top: 3%;
     color: white;
 }
@@ -14,7 +14,7 @@ body .result {
 .ttable {
   background-color: white;
   width: 100px;
-  margin-top: 1015rem;
+  margin-top: 1957rem;
 }
 
 .show-button {
@@ -35,7 +35,7 @@ body .result {
   overflow-x: scroll;
   overflow-y: scroll;
   height: 30rem;
-  width: 40%;
+  width: 50%;
   justify-content: center;
   display: flex;
 
@@ -43,4 +43,27 @@ body .result {
   background-size: cover;
   background-image: url('./../assets/table.jpg');
   background-repeat: no-repeat, repeat;
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+  
+  background-position: center;
+  background-size: cover;
+  background-image: url('./../assets/favicon.ico');
+  background-repeat: no-repeat, repeat;
+}
+
+.search-bar {
+  display: grid;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 5rem;
+}
+
+.search-bar .query-form {
+  width: 300%;
 }

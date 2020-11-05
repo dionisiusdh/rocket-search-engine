@@ -1,0 +1,38 @@
+US election security officials say no matter who emerges as the winner of the country’s presidential election, it will be American voters, not foreign adversaries, who determined the outcome.
+
+“We have no evidence any foreign adversary was capable of preventing Americans from voting or changing vote tallies," Christopher Krebs, chief of the U.S. Cybersecurity and Infrastructure Security Agency (CISA), said in a statement late Wednesday.
+
+The statement follows similar assurances from election and security officials after polls closed late Tuesday, when U.S. Cyber Command’s General Paul Nakasone said he was “confident the actions we've taken against adversaries over the past several weeks and months have ensured they're not going to interfere.”
+
+The CISA statement also comes at a key moment, as election officials in a handful of states tally the last votes in what has become a tight race between U.S. President Donald Trump and his challenger, former Vice President Joe Biden.
+
+Already, the Trump campaign has sought to challenge some of the results, filing a lawsuit in the state of Michigan over complaints about access to counting locations, while calling for a recount in the state of Wisconsin.
+
+Social media have also been rife with rumors and allegations of domestic fraud, including some allegations circulated by accounts belonging to members of Trump’s family or other high-profile supporters.
+
+CISA and the FBI on Wednesday declined to comment on the allegations, but organizations representing state election officials said they were “diligently counting every eligible ballot cast.”
+
+"Over the course of the election, more than 100 million ballots were safely and securely cast, both in-person and by mail,” according to a joint statement by the National Association of State Election Directors and the National Association of Secretaries of State.
+
+“These results are unofficial, and numbers will continue to change until they have been reviewed and certified,” the statement said, adding, “This is standard for each election."
+
+In the weeks leading up to Tuesday’s nationwide vote, U.S. intelligence officials publicly acknowledged both Iran and Russia had sought to meddle in the election by hacking into systems connected to voter registration databases.
+
+They said that while the Iranians infiltrated one state’s database and used that information as part of a disinformation campaign, the attacks were shut down and did not have any impact on the election.
+
+Still, Cyber Command’s Nakasone tweeted Wednesday that with votes still being counted, his teams remained active, “countering foreign adversaries that seek to interfere.”
+Other government agencies charged with helping secure the election spent Wednesday shifting their focus from protecting U.S. election infrastructure to pushing back against disinformation campaigns designed to undermine confidence in the election itself.
+
+"You could potentially see [website] defacements, manipulating counts on certain websites or even on media,” a senior CISA official, speaking on the condition of anonymity, warned late Tuesday as the final polling sites were closing. "You could see disinformation campaigns out there amplifying or pushing false results or outcomes."
+
+Officials and experts said some of those campaigns appeared to get underway as the polls began to close Tuesday, pointing to posts on social media by Russian-backed media outlets.
+
+By late Wednesday, CISA used Twitter to urge Americans to beware.
+
+“We're seeing reports of fake media accounts calling a state,” CISA’s Krebs said, pointing to a series of tweets pretending to come from The Associated Press, saying Biden had won Michigan, though at the time, no such call had been made.
+
+Some experts warned that U.S. adversaries are likely biding their time, content to take advantage of the existing American disinformation ecosystem.
+
+“The foreign actors only have to amplify the things certain domestic actors are saying,” said Nina Jankowicz, a disinformation fellow at the Washington-based Woodrow Wilson International Center for Scholars.
+
+“There's a lot more to be gained in the post-Election Day period, in terms of inspiring greater distrust in the democratic system for the long term,” she said.

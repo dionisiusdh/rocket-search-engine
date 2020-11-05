@@ -1,4 +1,5 @@
 import React from "react";
+import { Spinner } from "react-bootstrap";
 import { List, Header } from "semantic-ui-react";
 import "./Document.css"
 
@@ -22,9 +23,10 @@ export const Document = ({ docs }) => {
         );
     } else {
         return (
-            <div>
+            <div className="loading-box center">
+                <Spinner animation="border" role="status"/>
                 <a>Loading...</a><br></br>
-                <a>Tidak ada dokumen atau query yang ditemukan.</a>
+                <a>Belum ada dokumen atau query yang ditemukan.</a>
             </div>
         )
     }

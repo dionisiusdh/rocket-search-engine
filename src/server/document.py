@@ -115,7 +115,7 @@ def get_table(title, documents):
 def get_table_html(table):
     # Menghasilkan format HTML dari tabel
     # get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
-    res = "<a href='/'>Back</a>"
+    res = ""
     res += "<table><tr>"
     #res += "<table border==\"1\"><tr>"
 

@@ -56,7 +56,12 @@ def term_frequency_table(q, html=False):
     # Cek nama file yang ada dalam folder test (path relative terhadap folder server)
     DOCUMENT_PATH = "../../test/upload/"
 
-    all_files = get_files(DOCUMENT_PATH)
+    # all_files = get_files(DOCUMENT_PATH)
+    all_files = []
+    query_result = query_sim(q)
+    
+    for result in query_result:
+        all_files.append(result['title'])
 
     # Read file
     docs = []

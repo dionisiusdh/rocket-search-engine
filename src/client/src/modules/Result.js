@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { setCookie } from './../services/Cookie';
 
 // Components
 import { Footer } from '../components/Footer';
@@ -10,13 +11,14 @@ import { Link } from 'react-router-dom';
 import { JsonToTable } from "react-json-to-table";
 
 // Styling
-import "./Result.css"
-import { Button } from 'react-bootstrap';
+import "./Result.css";
+import { Form, Button } from 'react-bootstrap';
 
 function Result() {
   const [documents, setDocuments] = useState([]);
-  const [table, setTable] = useState('')
-  const [showTable, setShowTable] = useState(false)
+  const [table, setTable] = useState('');
+  const [showTable, setShowTable] = useState(false);
+  const [newQuery, setNewQuery] = useState("");
   const [path, setPath] = useState('');
 
   useEffect(() => {
@@ -52,31 +54,50 @@ function Result() {
     }
   }
 
+  function refreshPage() {
+    setCookie('query',newQuery,1);
+    setDocuments([]);
+  }
+
   return (
-    <body className="result">
-      <Header/>
-      <div className="App">
-        <h1 className="result-title">Result</h1>
-        <Button className="show-button" onClick={getTfTable}>{showTable ? <p>Hide Term Table</p> : <p>Show Term Table</p>}</Button>
-        {showTable ? 
-          <div className="ttable-all center">
-            <h2 className="ttable-title">Term Frequency Table</h2>
-            <div className="ttable-box">
-              <div className="ttable center">
-                <JsonToTable json={table}/>
-              </div> 
-            </div>
+    <div>
+        <body className="result">
+          <Header/>
+          <div className="search-bar">
+            <Form>
+                <Form.Group className="query-box center" action="/post" method="post">
+                    <Form.Control className="query-form" required type="text" name="que"
+                                  placeholder="Query..." 
+                                  onChange={e => setNewQuery(e.target.value)} />
+                    <Form.Text className="text-muted">
+                    </Form.Text>
+                    <div><Button onClick={() => refreshPage()}variant="success" type="submit" value="submit">Search</Button>{' '}</div>
+                </Form.Group>
+            </Form>
           </div>
-            
-            : 
-            
-            <a></a>
-        }
-        <Container style={{textAlign:'left'}}>
-          <Document docs={documents} />
-        </Container>
-      </div>
-    </body>
+          <div className="App">
+            <h1 className="result-title">Result for: {getCookie('query')}</h1>
+            <Button className="show-button" onClick={getTfTable}>{showTable ? <p>Hide Term Table</p> : <p>Show Term Table</p>}</Button>
+            {showTable ? 
+              <div className="ttable-all center">
+                <h2 className="ttable-title">Term Frequency Table</h2>
+                <div className="ttable-box">
+                  <div className="ttable center">
+                    <JsonToTable json={table}/>
+                  </div> 
+                </div>
+              </div>
+                
+                : 
+                
+                <a></a>
+            }
+            <Container style={{textAlign:'left'}}>
+              <Document docs={documents} />
+            </Container>
+          </div>
+        </body>
+    </div>
   );
 }
 
