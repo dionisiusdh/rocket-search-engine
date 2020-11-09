@@ -82,7 +82,7 @@ function Result() {
               <div className="ttable-all center">
                 <h2 className="ttable-title">Term Frequency Table</h2>
                 <div className="ttable-box">
-                  <div className="ttable center">
+                  <div className="ttable">
                     <JsonToTable json={table}/>
                   </div> 
                 </div>

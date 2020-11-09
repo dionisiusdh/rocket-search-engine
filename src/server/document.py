@@ -85,6 +85,46 @@ def get_num_words(titles, documents):
 
 def get_table(title, documents):
     # Menghasilkan tabel perhitungan kata dalam format .json
+    # Hanya menampilkan term global dari query
+    # [
+    #   {
+    #       "Term": ...,
+    #       "Query": ...,
+    #       "D1":...,
+    #       ...
+    #   }
+    # ]
+    table = []
+    
+    # Ekstraksi query
+    query = document(documents[0])
+    query.preprocess()
+    terms = query.tokens
+
+    # Ekstraksi tf
+    tf = term_frequency(get_tokens(documents))
+
+    # Pembuatan hasil
+    for term in terms:
+        m = dict()
+        m['Term'] = term
+
+        for i in range(len(documents)):
+            if i == 0:
+                key='Query'
+            else:
+                key = 'D' + str(i)
+            
+            current_doc = document(documents[i])
+            m[key] = tf[i][term]
+        
+        table.append(m)
+        
+    return table
+
+"""
+def get_table(title, documents):
+    # Menghasilkan tabel perhitungan kata dalam format .json
     # [
     #   {
     #       "Term": ...,
@@ -111,6 +151,7 @@ def get_table(title, documents):
         table.append(m)
         
     return table
+"""
 
 def get_table_html(table):
     # Menghasilkan format HTML dari tabel

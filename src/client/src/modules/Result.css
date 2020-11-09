@@ -8,14 +8,17 @@ body .result {
     font-family: 'Product Sans';
     font-size: 2rem;
     padding-top: 3%;
+    padding-left: 22%;
+    padding-right: 22%;
     color: white;
 }
 
 .ttable {
-  background-color: white;
   width: 100px;
-  margin-top: 1957rem;
+  margin-right: 70%;
+  margin-top: 3%;
 }
+
 
 .show-button {
   margin-top: 1rem;
@@ -34,7 +37,7 @@ body .result {
 .ttable-box {
   overflow-x: scroll;
   overflow-y: scroll;
-  height: 30rem;
+  height: 20rem;
   width: 50%;
   justify-content: center;
   display: flex;
