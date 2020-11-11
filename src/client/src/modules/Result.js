@@ -67,7 +67,7 @@ function Result() {
             <Form>
                 <Form.Group className="query-box center" action="/post" method="post">
                     <Form.Control className="query-form" required type="text" name="que"
-                                  placeholder="Query..." 
+                                  placeholder="Another Query..." 
                                   onChange={e => setNewQuery(e.target.value)} />
                     <Form.Text className="text-muted">
                     </Form.Text>

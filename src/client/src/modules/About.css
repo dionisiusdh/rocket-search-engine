@@ -4,9 +4,9 @@ body .about {
   
     background-position: center;
     background-size: cover;
-    background-image: url('./../assets/background.jpg');
+    background-image: url('./../assets/background2.jpg');
     background-repeat: no-repeat, repeat;
-  }
+}
 
 .table {
     width: 20%;
@@ -22,4 +22,30 @@ body .about {
 .about-box h2 {
     font-family: 'Product Sans';
     color: #1aa260;
+}
+
+.about-desc {
+    color: white;
+    background-color: black;
+
+    width: 37rem;
+    height: 20rem;
+
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    border-radius: 5%;
+
+    text-align: justify;
+    opacity: 90%;
+}
+
+.about-desc h2 {
+    color: grey;
+}
+
+.cb {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

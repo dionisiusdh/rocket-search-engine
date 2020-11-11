@@ -21,7 +21,7 @@ export const Upload = () => {
             <Header/>
             <div className="upload-box center">
                 <h1 className="upload-title">Upload Dokumen</h1>
-                <h4>Pilih satu atau lebih dokumen berformat: .txt / .html</h4>
+                <h4>Pilih satu atau lebih dokumen berformat: .txt</h4>
                 <Form method="post" enctype="multipart/form-data">
                     <input type="file" name="file" multiple/>
                     <input type="submit" value="Upload" onClick={handleUpload}/>
