@@ -19,7 +19,14 @@
 Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem temu balik informasi dengan menggunakan teori dot product pada vektor. Pada website ini, pengguna dapat memasukkan query dan mendapatkan hasil dokumen terurut berdasarkan nilai cosine similarity.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+### Home page
+![Example screenshot](./src/client/public/web1.png)
+
+### Upload page
+![Example screenshot](./src/client/public/web3.png)
+
+### Result page
+![Example screenshot](./src/client/public/web2.png)
 
 ## Technologies
 * React.js
@@ -44,14 +51,8 @@ Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem t
 
 
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Query search based on cosine similarity
+* Showing term frequency table based on query
+* Multiple files upload
 
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
-
-
-## Terima kasih
+## Thank you
