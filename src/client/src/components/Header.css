@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  z-index: 96;
 }
 
 .navbar {
@@ -9,6 +10,10 @@
     justify-content: space-around;
     height: 3.5rem;
     padding-top: 0.5rem;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 
 .title {

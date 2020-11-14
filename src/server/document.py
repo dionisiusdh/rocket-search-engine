@@ -12,6 +12,8 @@ try:
     from nltk.tokenize import word_tokenize 
     from nltk.stem import PorterStemmer
     from vector import term_frequency
+    from langdetect import detect
+    from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 except:  
     print("Mohon install requirements terlebih dahulu.")
     print("pip install -r requirements.txt")
@@ -35,6 +37,13 @@ class document():
         text = re.sub('((www\.[^\s]+)|(https?://[^\s]+)|(http?://[^\s]+))',' ',text) # Menghapus URL
         text = re.sub('\n',' ',text)    # Menghapus newline \n
         text = re.sub('[^0-9a-zA-Z]+', ' ', text)   # Menghapus karakter alphanumerik
+
+        lang = detect(text)
+        if (lang == 'id'):
+            # create Bahasa Indonesia stemmer
+            factory_id = StemmerFactory()
+            stemmer_id = factory_id.create_stemmer()
+            text = stemmer_id.stem(text)
 
         tokens = word_tokenize(text) # Tokenize words
 
