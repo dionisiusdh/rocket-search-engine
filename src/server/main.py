@@ -1,3 +1,8 @@
+# =============================================================
+# Module main.py
+# =============================================================
+# Pemrosesan backend dan API untuk menghubungkan frontend
+
 from flask import Flask, redirect, flash, render_template, url_for, json, jsonify, request, send_from_directory
 import os
 from program import query_sim, term_frequency_table

@@ -1,3 +1,8 @@
+# =============================================================
+# Module program.py
+# =============================================================
+# Program Utama
+
 try:
     from os import listdir
     from os.path import isfile, join
