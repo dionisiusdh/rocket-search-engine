@@ -1,4 +1,6 @@
 # Tugas Besar 2 - Aljabar Linear dan Geometri
+![](https://aleen42.github.io/badges/src/npm.svg)
+![](https://img.shields.io/badge/flask-v1.1.2-blue)
 > Aplikasi Dot Product pada Sistem Temu Balik Informasi
 
 ### Kelompok 8 - tasdasdadwda
@@ -56,9 +58,9 @@ Algeo02-19010
 ```
 
 ## Technologies
-* React.js
-* Flask
-* Python Libraries : NLTK
+* **JavaScript**           : React.js
+* **Python**               : Flask
+* **Additional Libraries** : NLTK
 
 ## Setup
 1. Pastikan Node.js, NPM, Python, dan Flask telah terinstall di komputer anda.
