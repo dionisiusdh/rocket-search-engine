@@ -1,4 +1,6 @@
 # Tugas Besar 2 - Aljabar Linear dan Geometri
+![](https://aleen42.github.io/badges/src/npm.svg)
+![](https://img.shields.io/badge/flask-v1.1.2-blue)
 > Aplikasi Dot Product pada Sistem Temu Balik Informasi
 
 ### Kelompok 8 - tasdasdadwda
@@ -29,10 +31,10 @@ Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem t
 ### Result page
 ![Example screenshot](./src/client/public/web2.png)
 
-## Folder structure
 <span id='structure'></span>
+## Folder structure
 ```
-Algeo01-19010
+Algeo02-19010
 │
 ├── src
 │   └── client /            [ Frontend ]
@@ -56,22 +58,22 @@ Algeo01-19010
 ```
 
 ## Technologies
-* React.js
-* Flask
-* Python Libraries : NLTK
+* **JavaScript**           : React.js
+* **Python**               : Flask
+* **Additional Libraries** : NLTK
 
 ## Setup
 1. Pastikan Node.js, NPM, Python, dan Flask telah terinstall di komputer anda.
 2. Clone repository ini pada komputer anda
 
 **Frontend**
-1. Masuk ke dalam folder src/client/ dengan command ```cd src/client```
+1. Masuk ke dalam folder src/client/ dengan command ```cd src/client``` (Relative terhadap directory utama)
 2. Install seluruh component npm yang diperlukan dengan ```npm install```
 3. Jalankan command ```npm start```
 3. Website akan terbuka pada browser dengan alamat localhost:3000
 
 **Backend**
-1. Masuk ke dalam folder src/server/ dengan command ```cd src/server```
+1. Masuk ke dalam folder src/server/ dengan command ```cd src/server``` (Relative terhadap directory utama)
 2. Install requirements yang dibutuhkan dengan menjalankan perintah ``` pip install -r requirements.txt ``` atau install secara manual dengan melihat list dependencies yang diperlukan pada ```requirements.txt```
 3. Jalankan command ```flask run```
 4. Backend telah dijalankan. Pastikan untuk merefresh browser jika terjadi kendala

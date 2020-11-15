@@ -50,7 +50,6 @@ class document():
             stemmer = StemmerFactory().create_stemmer()
 
             res = [stemmer.stem(w.lower()) for w in tokens if not w in stop_words]
-            print(res)
         else:
             # English
             # Removing stopwords and Stemming
@@ -59,7 +58,7 @@ class document():
 
             res = [stemmer.stem(w.lower()) for w in tokens if not w in stop_words]
         """
-
+              
         # Removing stopwords and Stemming
         stop_words = set(stopwords.words('english'))
         stemmer = PorterStemmer()
