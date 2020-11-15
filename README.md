@@ -11,6 +11,7 @@
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
+* [Folder structure](#structure)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -27,6 +28,32 @@ Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem t
 
 ### Result page
 ![Example screenshot](./src/client/public/web2.png)
+
+## Folder structure
+<span id='structure'></span>
+```
+Algeo01-19010
+│
+├── src
+│   └── client /            [ Frontend ]
+│   └── server /            [ Backend ]
+│       └── main.py         [ API ]
+│       └── program.py
+│       └── document.py
+│       └── reader.py
+│       └── vector.py
+│
+├── docs
+│   └── 8_LaporanTugasBesar2IF2123_tasdasdadwda.docx
+│   └── 8_LaporanTugasBesar2IF2123_tasdasdadwda.pdf
+│
+├── test
+│   └── upload              [ Upload database ]
+│       └── ... .txt        [ Uploaded test documents ]
+│   └── ... .txt            [ Test documents 1 - 17 ]
+│
+└── README.md
+```
 
 ## Technologies
 * React.js
@@ -49,10 +76,10 @@ Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem t
 3. Jalankan command ```flask run```
 4. Backend telah dijalankan. Pastikan untuk merefresh browser jika terjadi kendala
 
-
 ## Features
 * Query search based on cosine similarity
 * Showing term frequency table based on query
+* Showing original document
 * Multiple files upload
 
 ## Thank you

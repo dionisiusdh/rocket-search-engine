@@ -122,37 +122,6 @@ def get_table(title, documents):
         
     return table
 
-"""
-def get_table(title, documents):
-    # Menghasilkan tabel perhitungan kata dalam format .json
-    # [
-    #   {
-    #       "Term": ...,
-    #       "Query": ...,
-    #       "D1":...,
-    #       ...
-    #   }
-    # ]
-    table = []
-    tf = term_frequency(get_tokens(documents))
-    terms = list(tf[0].keys())
-
-    for term in terms:
-        m = dict()
-        m['Term'] = term
-
-        for i in range(len(documents)):
-            if i == 0:
-                key = 'Query'
-            else:
-                key = 'D' + str(i)
-            m[key] = tf[i][term]
-        
-        table.append(m)
-        
-    return table
-"""
-
 def get_table_html(table):
     # Menghasilkan format HTML dari tabel
     # get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
