@@ -29,10 +29,10 @@ Search engine dalam bentuk website lokal yang merupakan sebuah aplikasi sistem t
 ### Result page
 ![Example screenshot](./src/client/public/web2.png)
 
-## Folder structure
 <span id='structure'></span>
+## Folder structure
 ```
-Algeo01-19010
+Algeo02-19010
 │
 ├── src
 │   └── client /            [ Frontend ]
