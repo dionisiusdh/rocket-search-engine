@@ -12,6 +12,8 @@ try:
     from nltk.tokenize import word_tokenize 
     from nltk.stem import PorterStemmer
     from vector import term_frequency
+    # from langdetect import detect
+    # from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 except:  
     print("Mohon install requirements terlebih dahulu.")
     print("pip install -r requirements.txt")
@@ -37,6 +39,26 @@ class document():
         text = re.sub('[^0-9a-zA-Z]+', ' ', text)   # Menghapus karakter alphanumerik
 
         tokens = word_tokenize(text) # Tokenize words
+
+        """
+        # Multi language support
+        lang = detect(text)
+        if (lang == 'id'):  
+            # Bahasa Indonesia
+            # Removing stopwords and Stemming
+            stop_words = set(stopwords.words('indonesian'))
+            stemmer = StemmerFactory().create_stemmer()
+
+            res = [stemmer.stem(w.lower()) for w in tokens if not w in stop_words]
+            print(res)
+        else:
+            # English
+            # Removing stopwords and Stemming
+            stop_words = set(stopwords.words('english'))
+            stemmer = PorterStemmer()
+
+            res = [stemmer.stem(w.lower()) for w in tokens if not w in stop_words]
+        """
 
         # Removing stopwords and Stemming
         stop_words = set(stopwords.words('english'))
@@ -127,7 +149,6 @@ def get_table_html(table):
     # get_table_html(get_table(all_files, ([docs[len(docs)-1]] + docs[:len(docs)-1])))
     res = ""
     res += "<table><tr>"
-    #res += "<table border==\"1\"><tr>"
 
     for key in list(table[0].keys()):
         res += '<td>' + str(key) + '</td>'
